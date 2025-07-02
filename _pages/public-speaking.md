@@ -6,7 +6,7 @@ permalink: /public-speaking/
 
 # Public Speaking
 
-I love talking about security and making it accessible for all. Below is a selection of my recorded conference talks, webinars, and panels at industry events. If you are interested in me speaking at your event, please get in touch via the Contact Me page.
+I love talking about security and making it accessible for all. Below is a selection of my recorded conference talks, webinars, and panels at industry events. If you are interested in me speaking at your event, please get in touch via the Contact page.
 
 ## Conference Talks & Webinars
 
