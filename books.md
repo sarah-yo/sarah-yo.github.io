@@ -6,7 +6,7 @@ permalink: /books/
 
 <div style="display: flex; flex-direction: row-reverse; align-items: center; gap: 24px; margin-bottom: 32px;">
   <a href="https://www.amazon.com/Exam-SC-100-Microsoft-Cybersecurity-Architect/dp/0137997302/ref=sr_1_1?dib=eyJ2IjoiMSJ9.8eIDBO59g8IxFoP-0BNTPKqKDU1ipK7GS2_Hxb4q97kjdcekQ03t04CYHdqBF9cT1Uio74LWTaVlLfo3Ifr7Sp7Z4lsP87U7xZshYDbnBdxGOSzNzsUvNh9fKqxR0kSav9AifLcalNMaWJVDVo2Q97rxjQQIsnVcX7q7y6Pp-NDohp5KDxFk5Du-fmTSOZ-NdiJ9_vSq5VWoZ-z34HxeqynKKCiTIq-v2wVrZPlvO2k.rZWJOSIPaCEV6c2Rsz60sqDfllW_uZq1nzt0ZVEfkUE&dib_tag=se&keywords=sc+100&qid=1751445550&s=books&sr=1-1" target="_blank" rel="noopener">
-    <img src="/assets/img/sc-100-book.jpg" alt="SC-100 Book Cover" style="max-width: 180px; width: 100%; height: auto; border: 1px solid #ddd; box-shadow: 2px 2px 8px #eee; display: block; margin: 0 auto;">
+    <img src="/assets/img/sc-100-book.png" alt="SC-100 Book Cover" style="max-width: 180px; width: 100%; height: auto; border: 1px solid #ddd; box-shadow: 2px 2px 8px #eee; display: block; margin: 0 auto;">
   </a>
   <div style="flex:1;">
     <h2>Exam Ref SC-100 Microsoft Cybersecurity Architect</h2>
