@@ -67,6 +67,36 @@
           border-right: none;
           border-bottom: 1px solid #e0e0e0;
           padding: 0 8px;
+          width: 100vw;
+          height: auto;
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          position: static !important;
+        }
+        .sidebar > div {
+          flex-direction: row !important;
+          align-items: center !important;
+          justify-content: flex-start !important;
+          width: auto !important;
+          margin: 0 8px 0 0 !important;
+        }
+        .sidebar img {
+          max-width: 48px !important;
+          border-radius: 6px !important;
+          margin-bottom: 0 !important;
+        }
+        .sidebar div[style*="font-weight: bold"] {
+          font-size: 1em !important;
+          margin-left: 8px !important;
+        }
+        .sidebar div[style*="font-size: 0.98em"] {
+          font-size: 0.95em !important;
+          margin-left: 8px !important;
+        }
+        .sidebar div[style*="display: flex;"] a {
+          margin: 0 4px !important;
         }
         .content {
           padding: 10px;
