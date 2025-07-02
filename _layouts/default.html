@@ -118,6 +118,11 @@
           font-size: 0.98em;
           padding: 10px 0 8px 0;
         }
+        .sidebar { display: none !important; }
+        .mobile-banner { display: block !important; }
+      }
+      @media (min-width: 601px) {
+        .mobile-banner { display: none !important; }
       }
     </style>
 </head>
@@ -127,6 +132,21 @@
             {% include sidebar.html %}
         </aside>
         <main class="content">
+            <!-- Mobile banner: only visible on mobile -->
+            <div class="mobile-banner" style="display:none;">
+              <div style="display:flex;align-items:center;gap:12px;padding:10px 8px 10px 8px;background:#f5f5f5;border-bottom:1px solid #e0e0e0;">
+                <img src="/assets/img/shiba.jpg" alt="Shiba Inu" style="width:40px;height:40px;border-radius:6px;object-fit:cover;">
+                <div style="flex:1;">
+                  <div style="font-weight:bold;font-size:1em;">Sarah Young</div>
+                  <div style="font-size:0.95em;color:#555;">Cybersecurity Advocate</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:4px;">
+                  <a href="https://www.linkedin.com/in/sarahyo16/" target="_blank" rel="noopener"><img src="/assets/img/linkedin.png" alt="LinkedIn" style="width:28px;height:28px;border-radius:6px;object-fit:cover;"></a>
+                  <a href="https://x.com/_sarahyo" target="_blank" rel="noopener"><img src="/assets/img/x.png" alt="Twitter" style="width:28px;height:28px;border-radius:6px;object-fit:cover;"></a>
+                  <a href="https://bsky.app/profile/sarahyo.com" target="_blank" rel="noopener"><img src="/assets/img/bluesky.png" alt="Bluesky" style="width:28px;height:28px;border-radius:6px;object-fit:cover;"></a>
+                </div>
+              </div>
+            </div>
             <nav class="tabs">
                 <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>About Me</a>
                 <a href="{{ '/public-speaking/' | relative_url }}" {% if page.url contains '/public-speaking' %}class="active"{% endif %}>Public Speaking</a>
