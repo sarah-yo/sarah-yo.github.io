@@ -1,10 +1,10 @@
-<div style="display: flex; flex-direction: row-reverse; align-items: center; gap: 32px; flex-wrap: wrap;">
-  <img src="/assets/img/sarah.jpg" alt="Sarah Young" style="max-width: 260px; width: 100%; height: auto; border-radius: 8px; box-shadow: 2px 2px 8px #eee; display: block; margin: 0 auto;">
+<div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+  <img src="/assets/img/sarah.jpg" alt="Sarah Young" style="max-width: 260px; width: 100%; height: auto; border-radius: 8px; box-shadow: 2px 2px 8px #eee; display: block; margin: 0 auto;" />
 </div>
 
 # Bio
 
-Sarah is a cyber security advocate who engages with individuals and organizations worldwide to share her knowledge and experience in cyber security. 
+Sarah is a cyber security advocate working at Microsoft who engages with individuals and organizations worldwide to share her knowledge and experience in cyber security. 
 
 As a cloud security expert, Sarah's mission is to educate and empower communities to do the right things securely with the technology they implement. She has also authored white papers and books on various cyber security topics and is a co-host of the popular Microsoft Azure Security Podcast.
 
