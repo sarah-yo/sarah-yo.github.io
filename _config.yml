@@ -1,10 +1,26 @@
-title: Sarah Young
-description: >-
-  Sarah Young: Principal Security Advocate
-
+title: Sarah Young - Cybersecurity Advocate
+description: A personal website for Sarah Young, showcasing her work in cybersecurity, public speaking, and more.
+theme: jekyll-minimal
+url: "https://sarahyoung.github.io"
 baseurl: ""
-
-url: "https://sarah-yo.github.io"
-
-# theme: jekyll-theme-tactile
-
+author:
+  name: "Sarah Young"
+  email: "sarah@example.com"
+social:
+  linkedin: "https://www.linkedin.com/in/sarahyoung"
+  twitter: "https://twitter.com/sarahyoung"
+  bluesky: "https://bsky.app/profile/sarahyoung.bsky.social"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - README.md
+  - _config.yml
+  - _includes
+  - _layouts
+  - _pages
+  - assets
+  - index.md
