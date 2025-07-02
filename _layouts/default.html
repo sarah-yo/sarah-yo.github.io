@@ -13,6 +13,15 @@
             {% include sidebar.html %}
         </aside>
         <main class="content">
+    <nav class="tabs">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>About Me</a>
+        <a href="{{ '/public-speaking/' | relative_url }}" {% if page.url contains '/public-speaking' %}class="active"{% endif %}>Public Speaking</a>
+        <a href="{{ '/podcast/' | relative_url }}" {% if page.url contains '/podcast' %}class="active"{% endif %}>The Microsoft Azure Security Podcast</a>
+        <a href="{{ '/books/' | relative_url }}" {% if page.url contains '/books' %}class="active"{% endif %}>Books</a>
+        <a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a>
+    </nav>
+    {{ content }}
+</main>
             {{ content }}
         </main>
     </div>
