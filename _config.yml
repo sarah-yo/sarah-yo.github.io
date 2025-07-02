@@ -18,9 +18,3 @@ markdown: kramdown
 highlighter: rouge
 exclude:
   - README.md
-  - _config.yml
-  - _includes
-  - _layouts
-  - _pages
-  - assets
-  - index.md
