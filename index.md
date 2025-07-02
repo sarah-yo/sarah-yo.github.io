@@ -4,6 +4,9 @@ title: About Me
 permalink: /
 ---
 
+<div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap; min-height: 220px;">
+  <div style="flex: 1; min-width: 220px;">
+
 # Bio
 
 Sarah is a cyber security advocate working at Microsoft who engages with individuals and organizations worldwide to share her knowledge and experience in cyber security. 
@@ -14,6 +17,8 @@ Sarah is an accomplished public speaker and has delivered presentations at vario
 
 For collaboration/speaking opportunities, please get in touch via the Contact page.
 
-<div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px;">
-  <img src="/assets/img/sarah.jpg" alt="Sarah Young" style="max-width: 260px; width: 100%; height: auto; border-radius: 8px; box-shadow: 2px 2px 8px #eee; display: block; flex-shrink: 0;" />
+  </div>
+  <div style="flex: 0 0 260px; display: flex; align-items: center; justify-content: flex-end;">
+    <img src="/assets/img/sarah.jpg" alt="Sarah Young" style="max-width: 260px; width: 100%; height: auto; border-radius: 8px; box-shadow: 2px 2px 8px #eee; display: block; flex-shrink: 0;" />
+  </div>
 </div>
