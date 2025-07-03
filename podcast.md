@@ -5,7 +5,7 @@ permalink: /podcast/
 ---
 
 <!-- Banner with podcast logo -->
-<div style="width:100%;height:140px;background:#e0e7ef;display:flex;align-items:center;justify-content:center;margin-bottom:32px;border-radius:8px;">
+<div class="podcast-banner">
   <img src="/assets/img/podcast-logo.jpg" alt="Podcast Logo Banner" style="height:120px;width:auto;max-width:100%;object-fit:contain;" />
 </div>
 
@@ -23,15 +23,31 @@ permalink: /podcast/
 </div>
 
 <style>
+.podcast-banner {
+  width: 100%;
+  height: 140px;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  border-radius: 0;
+  box-shadow: none;
+}
 .podcast-flex {
   display: flex;
   align-items: center;
   gap: 32px;
   flex-wrap: wrap;
 }
-.podcast-img { flex: 0 0 180px; display: flex; align-items: center; justify-content: center; height: 180px; background: #f5f5f5; border-radius: 8px; box-shadow: 2px 2px 8px #eee; }
+.podcast-img { flex: 0 0 180px; display: flex; align-items: center; justify-content: center; height: 180px; background: none; border-radius: 0; box-shadow: none; }
 .podcast-desc { flex: 1; min-width: 220px; }
 @media (max-width: 600px) {
+  .podcast-banner {
+    margin-bottom: 18px !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
   .podcast-flex {
     flex-direction: column;
     align-items: stretch;
@@ -41,6 +57,8 @@ permalink: /podcast/
     justify-content: center !important;
     margin: 0 auto;
     width: 100%;
+    height: auto !important;
+    padding: 0 !important;
   }
   .podcast-img img {
     margin: 0 auto !important;
