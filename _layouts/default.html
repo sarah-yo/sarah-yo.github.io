@@ -105,14 +105,15 @@
         .tabs {
           display: flex;
           flex-direction: column;
-          align-items: stretch;
+          align-items: center;
           gap: 6px;
         }
         .tabs a {
-          width: 100%;
+          width: 90%;
           text-align: center;
           font-size: 1.08em;
           padding: 10px 0;
+          margin: 0 auto;
         }
         .site-footer {
           font-size: 0.98em;
@@ -158,7 +159,7 @@
         </main>
     </div>
     <footer class="site-footer">
-        <p>&copy; {{ site.time | date: '%Y' }} Sarah Young. All rights reserved. | Built on GitHub Pages with a sprinkle of Copilot</p>
+        <p>&copy; {{ site.time | date: '%Y' }} Sarah Young. | Built on GitHub Pages with a sprinkle of Copilot</p>
     </footer>
 </body>
 </html>
