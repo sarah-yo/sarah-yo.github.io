@@ -10,7 +10,7 @@ permalink: /public-speaking/
 
   <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: flex-start;">
     <div style="flex: 1 1 30%; min-width: 280px; max-width: 32%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
-      <div><h3>Black Hat Asia 2023: Security Advocacy Shouldn't Be for Security Professionals</h3></div>
+      <div><h3>Black Hat Asia: Security Advocacy Shouldn't Be for Security Professionals</h3></div>
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
         <iframe src="https://www.youtube.com/embed/7ZA2Vl_VlhE" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
       </div>
