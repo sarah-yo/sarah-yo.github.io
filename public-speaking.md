@@ -6,7 +6,7 @@ permalink: /public-speaking/
 
 <div>
   <h1 style="margin-top:0;">Public Speaking</h1>
-  <p>I love talking about security and making it accessible for all. Below is a selection of my recorded conference talks, webinars, and panels at industry events. If you are interested in me speaking at your event, please get in touch via the Contact page.</p>
+  <p>I love talking about security and making it accessible for all. Below is a selection of my recorded conference talks, webinars, and panels at industry events.</p>
 
   <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: flex-start;">
     <div style="flex: 1 1 30%; min-width: 280px; max-width: 32%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
