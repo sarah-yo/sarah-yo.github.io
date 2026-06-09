@@ -7,9 +7,9 @@ permalink: /
 <div class="about-center">
   <div class="about-desc">
     <h1>Bio</h1>
-    <p>Sarah is a cyber security advocate working at Microsoft who engages with individuals and organizations worldwide to share her knowledge and experience in cyber security.</p>
-    <p>As a cloud security expert, Sarah's mission is to educate and empower communities to do the right things securely with the technology they implement. She has also authored white papers and books on various cyber security topics and is a co-host of the popular Microsoft Azure Security Podcast.</p>
-    <p>Sarah is an accomplished public speaker and has delivered presentations at various industry events including Black Hat. She is passionate about supporting the security communities across the globe and promoting diversity and inclusion in IT.</p>
+    <p>Hi, I'm Sarah. I've spent the past 15+ years working in tech, living and working in different parts of the world and getting to collaborate with all kinds of people along the way. I've built my career across security architecture, product management, and advocacy, but a consistent theme has always been making technology—especially security—more accessible and easier to understand.</p>
+    <p>I don't believe security should feel intimidating or out of reach. At its core, it's about helping people make better decisions and build things the right way from the start. A big part of what I do is breaking down complex technical ideas into something practical and approachable, whether that's for individuals, developers, or large organisations.</p>
+    <p>Over the years, I've been lucky enough to contribute to the global security community in a range of ways—speaking at industry events, writing books and white papers, co-hosting podcasts, and creating technical content. It's something I still genuinely enjoy, especially the opportunity to connect with people and help them feel more confident about security.</p>
     <p>For collaboration/speaking opportunities, please get in touch via the Contact page.</p>
   </div>
   <div class="about-img">
