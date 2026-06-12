@@ -9,7 +9,7 @@ permalink: /learning-courses/
     <img src="https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780135586532&type=f" alt="SC-401 Video Course Cover" style="max-width: 180px; width: 100%; height: auto; border: 1px solid #ddd; box-shadow: 2px 2px 8px #eee; display: block; margin: 0 auto;">
   </a>
   <div class="book-desc">
-    <h2>Exam SC-401 Administering Information Security in Microsoft 365 (Video course)</h2>
+    <h2>Exam SC-401: Administering Information Security in Microsoft 365</h2>
     <p>This video course provides comprehensive instruction on how to design and implement enterprise-grade information protection, data governance, and risk management strategies using Microsoft Purview and related Microsoft 365 security tools. It covers data classification, sensitivity labelling, data loss prevention, insider risk management, and audit monitoring — everything you need to administer information security in Microsoft 365.</p>
     <p>Whether you're an M365 admin, system admin, or security professional preparing for the <a href="https://learn.microsoft.com/en-us/credentials/certifications/information-security-administrator/" target="_blank">SC-401 exam</a>, this course walks through the practical skills and knowledge you'll need. You can purchase it from:</p>
     <ul>
@@ -24,7 +24,7 @@ permalink: /learning-courses/
     <img src="https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780135936573&type=f" alt="AB-730 Video Course Cover" style="max-width: 180px; width: 100%; height: auto; border: 1px solid #ddd; box-shadow: 2px 2px 8px #eee; display: block; margin: 0 auto;">
   </a>
   <div class="book-desc">
-    <h2>Exam AB-730 AI Business Professional (Video course)</h2>
+    <h2>Exam AB-730: AI Business Professional</h2>
     <p>This video course prepares you for the Microsoft AI Business Professional (AB-730) exam, covering the foundational knowledge and practical skills needed to work effectively with AI solutions in a business context. You can purchase it from:</p>
     <ul>
       <li><a href="https://www.microsoftpressstore.com/store/exam-ab-730-ai-business-professional-video-9780135936573" target="_blank" rel="noopener">Microsoft Press Store</a></li>
