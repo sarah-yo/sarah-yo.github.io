@@ -32,6 +32,20 @@ permalink: /learning-courses/
   </div>
 </div>
 
+<div class="book-flex book1">
+  <a href="https://www.microsoftpressstore.com/store/exam-sc-730-cybersecurity-business-professional-video-9780135951958" target="_blank" rel="noopener" class="book-img">
+    <img src="https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780135951958&type=f" alt="SC-730 Video Course Cover" style="max-width: 180px; width: 100%; height: auto; border: 1px solid #ddd; box-shadow: 2px 2px 8px #eee; display: block; margin: 0 auto;">
+  </a>
+  <div class="book-desc">
+    <h2>Exam SC-730 Cybersecurity Business Professional</h2>
+    <p>This video course prepares you for the Microsoft Cybersecurity Business Professional (SC-730) exam, covering the foundational knowledge needed to understand and apply cybersecurity concepts in a business context. The course is designed for business professionals rather than technical practitioners, focusing on how to identify cyber threats, understand security principles, and support an organisation's cybersecurity posture. Learners will explore topics such as security concepts, threat types, data protection, and compliance — without requiring a technical background. You can purchase it from:</p>
+    <ul>
+      <li><a href="https://www.microsoftpressstore.com/store/exam-sc-730-cybersecurity-business-professional-video-9780135951958" target="_blank" rel="noopener">Microsoft Press Store</a></li>
+      <li><a href="https://www.linkedin.com/learning/microsoft-cybersecurity-business-professional-sc-730-cert-prep-by-microsoft-press/exam-sc-730-cybersecurity-for-business-professional-54562030?u=373449818" target="_blank" rel="noopener">LinkedIn Learning</a></li>
+    </ul>
+  </div>
+</div>
+
 <style>
 .book-flex {
   display: flex;
