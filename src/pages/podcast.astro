@@ -46,6 +46,7 @@ import GlassPanel from '@/components/common/GlassPanel.astro';
 
           <!-- Spotify embedded player -->
           <div class="podcast-player">
+            <p class="podcast-player__label">Listen to our latest episode on Spotify here:</p>
             <iframe
               style="border-radius:12px"
               src="https://open.spotify.com/embed/show/6AZVRZWttZdYkvlSAXjiGK?utm_source=generator&theme=0"
@@ -148,6 +149,12 @@ import GlassPanel from '@/components/common/GlassPanel.astro';
     margin-top: var(--space-2xl);
     border-radius: 12px;
     overflow: hidden;
+  }
+
+  .podcast-player__label {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin: 0 0 var(--space-sm);
   }
 
   @media (max-width: 600px) {
