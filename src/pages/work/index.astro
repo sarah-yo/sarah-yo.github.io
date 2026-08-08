@@ -72,9 +72,11 @@ const courses = [
 
   <main id="main" tabindex="-1">
     <Container size="xl">
-      <div class="page-header">
-        <h1>Books &amp; Courses</h1>
+      <div class="page-meta">
+        <span>Books &amp; Courses</span>
+        <span>Microsoft Press &middot; LinkedIn Learning</span>
       </div>
+      <h1 class="page-title">Published work &amp; courses.</h1>
 
       <section class="section">
         <div class="tiles">
@@ -126,14 +128,24 @@ const courses = [
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-block: clamp(2rem, 5vw, 4rem) var(--space-2xl);
+  .page-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--space-lg);
     border-bottom: 1px solid var(--glass-border);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
   }
 
-  .page-header h1 {
-    margin: 0;
-    font-size: clamp(2rem, 4vw, 3rem);
+  .page-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
   }
 
   .section {

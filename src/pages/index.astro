@@ -16,7 +16,8 @@ import GlassCard from '@/components/ui/GlassCard.astro';
     <section class="about">
       <Container size="xl">
         <div class="about__tagline-bar">
-          <p class="about__tagline">Cyber security Advocate &nbsp;&bull;&nbsp; Speaker &nbsp;&bull;&nbsp; Podcaster &nbsp;&bull;&nbsp; Teacher &nbsp;&bull;&nbsp; Author</p>
+          <span class="about__tagline-left">About</span>
+          <span class="about__tagline-right">Cyber security Advocate &middot; Speaker &middot; Podcaster &middot; Teacher &middot; Author</span>
         </div>
         <GlassCard padding="xl" radius="xl" class="about__card">
           <div class="about__grid">
@@ -25,7 +26,7 @@ import GlassCard from '@/components/ui/GlassCard.astro';
             </div>
             <div class="about__text">
               <h1>About me</h1>
-              <p>Hi, I'm Sarah. I've spent the past 15+ years working in tech, living and working in different parts of the world and getting to collaborate with all kinds of people along the way. I've built my career across security architecture, product management, and advocacy, but a consistent theme has always been making technology—especially security—more accessible and easier to understand.</p>
+              <p>I've spent the past 15+ years working in tech, living and working in different parts of the world and getting to collaborate with all kinds of people along the way. I've built my career across security architecture, product management, and advocacy, but a consistent theme has always been making technology—especially security—more accessible and easier to understand.</p>
               <p>I don't believe security should feel intimidating or out of reach. At its core, it's about helping people make better decisions and build things the right way from the start. A big part of what I do is breaking down complex technical ideas into something practical and approachable, whether that's for individuals, developers, or large organisations.</p>
               <p>Over the years, I've been lucky enough to contribute to the global security community in a range of ways—speaking at industry events, writing books and white papers, co-hosting podcasts, and creating technical content. It's something I still genuinely enjoy, especially the opportunity to connect with people and help them feel more confident about security.</p>
             </div>
@@ -51,19 +52,16 @@ import GlassCard from '@/components/ui/GlassCard.astro';
   }
 
   .about__tagline-bar {
-    padding-block: clamp(1.5rem, 4vw, 2.5rem);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--space-lg);
     border-bottom: 1px solid var(--glass-border);
     margin-bottom: clamp(2rem, 5vw, 4rem);
-    text-align: center;
-  }
-
-  .about__tagline {
-    color: var(--color-accent);
-    font-size: var(--text-base);
-    font-weight: 600;
+    color: var(--color-text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 0;
+    letter-spacing: 0.13em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
   }
 
   .about__card h1 {
