@@ -88,12 +88,14 @@ const courses = [
                 <div class="tile__body">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  {item.note && <p class="tile__note">{item.note}</p>}
-                  <ul class="tile__links">
-                    {item.links.map((link) => (
-                      <li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>
-                    ))}
-                  </ul>
+                  <div class="tile__purchase">
+                    {item.note && <p class="tile__note">{item.note}</p>}
+                    <ul class="tile__links">
+                      {item.links.map((link) => (
+                        <li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </GlassCard>
@@ -110,12 +112,14 @@ const courses = [
                 <div class="tile__body">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  <p class="tile__note">Available to purchase from:</p>
-                  <ul class="tile__links">
-                    {item.links.map((link) => (
-                      <li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>
-                    ))}
-                  </ul>
+                  <div class="tile__purchase">
+                    <p class="tile__note">Available to purchase from:</p>
+                    <ul class="tile__links">
+                      {item.links.map((link) => (
+                        <li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </GlassCard>
@@ -176,6 +180,7 @@ const courses = [
     grid-template-columns: 120px 1fr;
     gap: var(--space-lg);
     align-items: start;
+    height: 100%;
   }
 
   .tile__cover {
@@ -199,8 +204,19 @@ const courses = [
     margin-bottom: var(--space-xs);
   }
 
+  .tile__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .tile__purchase {
+    margin-top: auto;
+    padding-top: var(--space-sm);
+  }
+
   .tile__note {
-    margin-top: var(--space-sm) !important;
+    margin-top: 0;
   }
 
   .tile__links {
