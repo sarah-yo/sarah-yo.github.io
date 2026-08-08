@@ -239,6 +239,7 @@ const navItems = getEnabledNavItems();
       -webkit-backdrop-filter: blur(20px) saturate(var(--glass-sat));
       border-bottom: 1px solid var(--glass-border);
       padding: var(--space-lg);
+      text-align: center;
       transform: translateY(-100%);
       opacity: 0;
       transition:
@@ -246,8 +247,6 @@ const navItems = getEnabledNavItems();
         opacity var(--transition-base),
         visibility var(--transition-base);
       pointer-events: none;
-      /* Remove the off-screen menu from the visual flow; the script also sets
-         `inert` so its links leave the tab order and a11y tree. */
       visibility: hidden;
     }
 
@@ -260,16 +259,16 @@ const navItems = getEnabledNavItems();
 
     .nav-list {
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
       gap: var(--space-sm);
     }
 
     .nav-link {
+      display: block;
+      width: 100%;
       min-height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-inline: var(--space-2xl);
+      line-height: 44px;
+      padding: 0 var(--space-xl);
       text-align: center;
     }
 

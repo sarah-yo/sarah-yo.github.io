@@ -21,7 +21,7 @@ import GlassCard from '@/components/ui/GlassCard.astro';
         <GlassCard padding="xl" radius="xl" class="about__card">
           <div class="about__grid">
             <div class="about__image">
-              <img src="/img/sarah-speaking.jpg" alt="Sarah Young speaking at Microsoft Build" />
+              <img src="/img/sarah-about.jpg" alt="Sarah Young at a Microsoft event" />
             </div>
             <div class="about__text">
               <h1>About me</h1>
@@ -81,8 +81,10 @@ import GlassCard from '@/components/ui/GlassCard.astro';
   }
 
   .about__image img {
-    width: min(380px, 38vw);
-    height: auto;
+    width: min(320px, 32vw);
+    height: min(420px, 42vw);
+    object-fit: cover;
+    object-position: center top;
     border-radius: 12px;
     display: block;
   }
@@ -101,6 +103,7 @@ import GlassCard from '@/components/ui/GlassCard.astro';
     .about__image img {
       width: 100%;
       max-width: 480px;
+      height: 280px;
       margin: 0 auto;
     }
   }
