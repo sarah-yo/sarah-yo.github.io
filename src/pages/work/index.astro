@@ -71,6 +71,7 @@ const courses = [
   <Header />
 
   <main id="main" tabindex="-1">
+    <section class="books-hero">
     <Container size="xl">
       <div class="page-meta">
         <span>Books &amp; Courses</span>
@@ -122,12 +123,17 @@ const courses = [
         </div>
       </section>
     </Container>
+    </section>
   </main>
 
   <Footer />
 </BaseLayout>
 
 <style>
+  .books-hero {
+    padding-block: clamp(3rem, 8vw, 7rem);
+  }
+
   .page-meta {
     display: flex;
     justify-content: space-between;
