@@ -1,0 +1,174 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/common/Header.astro';
+import Footer from '@/components/common/Footer.astro';
+import Container from '@/components/ui/Container.astro';
+import GlassPanel from '@/components/common/GlassPanel.astro';
+import Button from '@/components/ui/Button.astro';
+import siteConfig from '@/site.config';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Sarah Young for collaboration, speaking opportunities, or general enquiries."
+>
+  <Header />
+
+  <main id="main" tabindex="-1">
+    <section class="contact-hero">
+      <Container size="xl">
+        <GlassPanel variant="default" padding="xl" radius="xl" className="contact-hero__panel">
+          <div class="contact-hero__body">
+            <div class="contact-hero__copy">
+              <p class="contact-hero__label">Collaboration &amp; speaking</p>
+              <h1>Let&rsquo;s connect.</h1>
+              <p>
+                If you&rsquo;re interested in collaborating or having me present at your event,
+                please get in touch by emailing me:
+              </p>
+              <a href="mailto:hello@sarahyoung.io" class="contact-email">
+                hello [at] sarahyoung [dot] io
+              </a>
+            </div>
+            <div class="contact-hero__aside">
+              <img
+                src="/img/sarah-with-gray.jpeg"
+                alt="Sarah Young"
+                class="contact-hero__img"
+              />
+            </div>
+          </div>
+
+          <div class="contact-hero__footer">
+            <div class="contact-hero__socials">
+              {siteConfig.social.linkedin && (
+                <Button href={siteConfig.social.linkedin} external variant="outline" size="sm">
+                  LinkedIn ↗
+                </Button>
+              )}
+              {siteConfig.social.twitter && (
+                <Button href={siteConfig.social.twitter} external variant="outline" size="sm">
+                  X / Twitter ↗
+                </Button>
+              )}
+              {siteConfig.social.bluesky && (
+                <Button href={siteConfig.social.bluesky} external variant="outline" size="sm">
+                  Bluesky ↗
+                </Button>
+              )}
+            </div>
+          </div>
+        </GlassPanel>
+      </Container>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-hero {
+    padding-block: clamp(3rem, 8vw, 7rem);
+  }
+
+  .contact-hero__panel {
+    min-height: min(42rem, calc(100vh - 8rem));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contact-hero__meta,
+  .contact-hero__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .contact-hero__meta {
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .contact-hero__body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: clamp(2rem, 8vw, 6rem);
+    padding-block: clamp(3rem, 8vw, 6rem);
+  }
+
+  .contact-hero__label {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin: 0 0 var(--space-lg);
+  }
+
+  .contact-hero__copy > p {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    max-width: 40rem;
+  }
+
+  .contact-email {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .contact-email:hover {
+    border-color: var(--color-accent);
+  }
+
+  .contact-hero__img-center {
+    display: none;
+  }
+
+  .contact-hero__img {
+    width: min(280px, 30vw);
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .contact-hero__footer {
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .contact-hero__socials {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  @media (max-width: 640px) {
+    .contact-hero__body {
+      grid-template-columns: 1fr;
+    }
+    .contact-hero__img {
+      width: 100%;
+      max-width: 240px;
+    }
+  }
+</style>

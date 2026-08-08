@@ -1,0 +1,110 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/common/Header.astro';
+import Footer from '@/components/common/Footer.astro';
+import Container from '@/components/ui/Container.astro';
+import GlassCard from '@/components/ui/GlassCard.astro';
+---
+
+<BaseLayout
+  title="Sarah Young - Cybersecurity Advocate"
+  description="Personal website of Sarah Young — cybersecurity advocate, author, speaker, and podcast host."
+>
+  <Header />
+
+  <main id="main" tabindex="-1">
+    <section class="about">
+      <Container size="xl">
+        <div class="about__tagline-bar">
+          <p class="about__tagline">Cyber security Advocate &nbsp;&bull;&nbsp; Speaker &nbsp;&bull;&nbsp; Podcaster &nbsp;&bull;&nbsp; Teacher &nbsp;&bull;&nbsp; Author</p>
+        </div>
+        <GlassCard padding="xl" radius="xl" class="about__card">
+          <div class="about__grid">
+            <div class="about__image">
+              <img src="/img/sarah-speaking.jpg" alt="Sarah Young speaking at Microsoft Build" />
+            </div>
+            <div class="about__text">
+              <h1>About me</h1>
+              <p>Hi, I'm Sarah. I've spent the past 15+ years working in tech, living and working in different parts of the world and getting to collaborate with all kinds of people along the way. I've built my career across security architecture, product management, and advocacy, but a consistent theme has always been making technology—especially security—more accessible and easier to understand.</p>
+              <p>I don't believe security should feel intimidating or out of reach. At its core, it's about helping people make better decisions and build things the right way from the start. A big part of what I do is breaking down complex technical ideas into something practical and approachable, whether that's for individuals, developers, or large organisations.</p>
+              <p>Over the years, I've been lucky enough to contribute to the global security community in a range of ways—speaking at industry events, writing books and white papers, co-hosting podcasts, and creating technical content. It's something I still genuinely enjoy, especially the opportunity to connect with people and help them feel more confident about security.</p>
+            </div>
+          </div>
+        </GlassCard>
+      </Container>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .about {
+    padding-block: clamp(3rem, 8vw, 6rem);
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .about__tagline-bar {
+    padding-block: clamp(1.5rem, 4vw, 2.5rem);
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+  }
+
+  .about__tagline {
+    color: var(--color-accent);
+    font-size: var(--text-base);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+
+  .about__card h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 0;
+    margin-bottom: var(--space-xl);
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .about__image {
+    flex-shrink: 0;
+  }
+
+  .about__image img {
+    width: min(380px, 38vw);
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .about__text p {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    max-width: 60ch;
+  }
+
+  @media (max-width: 768px) {
+    .about__grid {
+      grid-template-columns: 1fr;
+    }
+    .about__image img {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+</style>

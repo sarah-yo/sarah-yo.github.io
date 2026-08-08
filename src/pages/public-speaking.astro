@@ -1,0 +1,198 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/common/Header.astro';
+import Footer from '@/components/common/Footer.astro';
+import Container from '@/components/ui/Container.astro';
+import GlassCard from '@/components/ui/GlassCard.astro';
+
+const talks = [
+  {
+    title: 'Microsoft Build Keynote: MDASH',
+    embed: 'https://www.youtube.com/embed/8QBDaRbur70',
+  },
+  {
+    title: 'Black Hat Asia: Security Advocacy Shouldn\'t Be for Security Professionals',
+    embed: 'https://www.youtube.com/embed/7ZA2Vl_VlhE',
+  },
+  {
+    title: 'Microsoft Build: Deploying an end-to-end secure AI application',
+    embed: 'https://www.youtube.com/embed/-4Pu0ELX3sk',
+  },
+  {
+    title: 'DDD Perth: Nerds on a Plane — What We Can Learn from the Aviation Industry',
+    embed: 'https://www.youtube.com/embed/VqiCrFhP-KY',
+  },
+  {
+    title: 'Microsoft Ignite: Making End to End Security Real',
+    embed: 'https://www.youtube.com/embed/dC4U3UVZsp8',
+  },
+  {
+    title: 'NDC Oslo: Emerging Threats Against Cloud Application Identities',
+    embed: 'https://www.youtube.com/embed/Dr2Sx3fQ-8Y',
+  },
+  {
+    title: 'BSides SF: Hanging on the Telephone — Hacking VoIP',
+    embed: 'https://www.youtube.com/embed/EPNjm9AcezA',
+  },
+];
+---
+
+<BaseLayout
+  title="Public Speaking"
+  description="A selection of Sarah Young's recorded conference talks, webinars, and panels at industry events including Black Hat, Microsoft Build, NDC Oslo, and more."
+>
+  <Header />
+
+  <main id="main" tabindex="-1">
+    <section class="speaking-hero">
+      <Container size="xl">
+        <div class="speaking-hero__meta">
+          <span>Public Speaking</span>
+          <span>Selected recordings</span>
+        </div>
+        <div class="speaking-hero__body">
+          <div>
+            <h1>Talks &amp; keynotes.</h1>
+            <p>
+              I love talking about security and making it accessible for all. Below is a selection
+              of my recorded conference talks, webinars, and panels at industry events.
+            </p>
+          </div>
+        </div>
+      </Container>
+    </section>
+
+    <div class="talks-section">
+      <Container size="xl">
+        <div class="talks-grid">
+        {
+          talks.map((talk) => (
+            <GlassCard padding="none" radius="xl" class="talk-card">
+              <div class="talk-card__video">
+                <iframe
+                  src={talk.embed}
+                  title={talk.title}
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                />
+              </div>
+              <div class="talk-card__title">
+                <h3>{talk.title}</h3>
+              </div>
+            </GlassCard>
+          ))
+        }
+      </div>
+      </Container>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .speaking-hero {
+    padding-block: clamp(3rem, 8vw, 7rem);
+  }
+
+  .speaking-hero__meta {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .speaking-hero__body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+    padding-block: clamp(3rem, 8vw, 6rem);
+  }
+
+  .speaking-hero__body h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+    margin-top: 0;
+  }
+
+  .speaking-hero__body p {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    max-width: 48rem;
+  }
+
+  .speaking-hero__img {
+    width: min(360px, 40vw);
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .talks-section {
+    padding-block: var(--space-xl) clamp(2rem, 6vw, 5rem);
+  }
+
+  .talks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
+  @media (max-width: 640px) {
+    .talks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .talk-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .talk-card__video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .talk-card__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .talk-card__title {
+    padding: var(--space-lg);
+  }
+
+  .talk-card__title h3 {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 640px) {
+    .speaking-hero__body {
+      grid-template-columns: 1fr;
+    }
+
+    .speaking-hero__img {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+</style>

@@ -1,0 +1,163 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/common/Header.astro';
+import Footer from '@/components/common/Footer.astro';
+import Container from '@/components/ui/Container.astro';
+import GlassPanel from '@/components/common/GlassPanel.astro';
+---
+
+<BaseLayout
+  title="Podcast"
+  description="The Microsoft Azure Security Podcast — a twice-monthly show on security, privacy, compliance, and governance on the Microsoft cloud platform."
+>
+  <Header />
+
+  <main id="main" tabindex="-1">
+    <section class="podcast-hero">
+      <Container size="xl">
+        <GlassPanel variant="default" padding="xl" radius="xl">
+          <div class="podcast-hero__body">
+          <div class="podcast-hero__left">
+            <img src="/img/podcast-logo.jpg" alt="The Microsoft Azure Security Podcast logo" class="podcast-logo" />
+            <img src="/img/sarah-podcast.jpeg" alt="Sarah Young" class="podcast-photo" />
+          </div>
+          <div class="podcast-hero__content">
+            <h1>The Microsoft Azure Security Podcast</h1>
+            <p>
+              A twice-monthly podcast dedicated to security, privacy, compliance, governance and
+              reliability on the Microsoft cloud platform. Hosted by Microsoft security experts
+              Michael Howard, Sarah Young, Gladys Rodriguez and Mark Simos.
+            </p>
+            <a
+              href="https://aka.ms/azsecpod"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="podcast-cta"
+            >
+              Listen on all platforms <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Spotify embedded player -->
+        <div class="podcast-player">
+          <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/show/2MVgFWMDnGy0gFk8kFnRHb?utm_source=generator&theme=0"
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="The Microsoft Azure Security Podcast on Spotify"
+          ></iframe>
+        </div>
+        </GlassPanel>
+      </Container>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .podcast-hero {
+    padding-block: clamp(3rem, 8vw, 7rem);
+  }
+
+  .podcast-hero__meta {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .podcast-hero__body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: clamp(2rem, 6vw, 5rem);
+    padding-block: clamp(3rem, 8vw, 6rem);
+  }
+
+  .podcast-hero__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  .podcast-logo {
+    width: 160px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .podcast-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--glass-border);
+  }
+
+  .podcast-hero__content h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+  }
+
+  .podcast-hero__content p {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    max-width: 52rem;
+  }
+
+  .podcast-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0.85rem 2rem;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .podcast-cta:hover {
+    opacity: 0.85;
+  }
+
+  .podcast-player {
+    margin-top: var(--space-2xl);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .podcast-hero__body {
+      grid-template-columns: 1fr;
+    }
+
+    .podcast-hero__left {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .podcast-logo,
+    .podcast-photo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+</style>

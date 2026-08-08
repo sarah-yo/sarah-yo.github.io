@@ -1,0 +1,537 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/common/Header.astro';
+import Footer from '@/components/common/Footer.astro';
+import GlassPanel from '@/components/common/GlassPanel.astro';
+import Button from '@/components/ui/Button.astro';
+import Container from '@/components/ui/Container.astro';
+import GlassCard from '@/components/ui/GlassCard.astro';
+import Section from '@/components/ui/Section.astro';
+import siteConfig from '@/site.config';
+import { withBase } from '@/lib/url';
+
+const formats = [
+  {
+    number: '01',
+    label: 'Author',
+    title: 'Books for Microsoft security exams.',
+    description:
+      'Co-author of the Exam Ref SC-100 and SC-200 books from Microsoft Press, helping professionals pass certifications and build real-world security skills.',
+    href: '/work/',
+  },
+  {
+    number: '02',
+    label: 'Speaker',
+    title: 'Keynotes and talks at global events.',
+    description:
+      'Regular speaker at Black Hat, Microsoft Build, NDC Oslo, Microsoft Ignite, BSides, and DDD events. Making security accessible is the common thread.',
+    href: '/public-speaking/',
+  },
+  {
+    number: '03',
+    label: 'Podcaster',
+    title: 'The Microsoft Azure Security Podcast.',
+    description:
+      'Co-host of a twice-monthly podcast covering security, privacy, compliance, and governance on the Microsoft cloud platform.',
+    href: '/podcast/',
+  },
+];
+
+const stack = [
+  {
+    name: 'Security Architecture',
+    category: 'Expertise',
+    detail: 'Designing and evolving cybersecurity strategy across enterprise architecture, with a focus on Zero Trust and cloud security.',
+  },
+  {
+    name: 'Microsoft Cloud Security',
+    category: 'Platform',
+    detail: 'Deep hands-on experience with Microsoft Defender XDR, Microsoft Sentinel, Microsoft Purview, and Azure security services.',
+  },
+  {
+    name: 'Security Education',
+    category: 'Advocacy',
+    detail: 'Breaking down complex technical ideas into practical, approachable content for individuals, developers, and large organisations.',
+  },
+  {
+    name: 'Product Management',
+    category: 'Background',
+    detail: 'Experience spanning security architecture, product management, and community advocacy across global organisations.',
+  },
+  {
+    name: 'Community',
+    category: 'Foundation',
+    detail: 'Contributing to the global security community through writing, speaking, podcasting, and mentoring.',
+  },
+];
+---
+
+<BaseLayout
+  title="About"
+  description="Sarah Young is a cybersecurity advocate, author, speaker, and podcast host with 15+ years in tech."
+>
+  <Header />
+
+  <main id="main" tabindex="-1">
+    <section class="about-hero">
+      <Container size="xl">
+        <GlassPanel
+          variant="solid"
+          padding="xl"
+          radius="xl"
+          className="about-hero__panel"
+        >
+          <div class="about-hero__meta">
+            <span>About Sarah Young</span>
+            <span>Cybersecurity Advocate</span>
+          </div>
+
+          <div class="about-hero__body">
+            <div class="about-hero__title">
+              <p>15+ years in tech</p>
+              <h1>Making security accessible.</h1>
+            </div>
+            <div class="about-hero__statement">
+              <p>
+                I’ve spent the past 15+ years working in tech, living and working in different parts of the world
+                and collaborating with all kinds of people along the way. My career spans security architecture,
+                product management, and advocacy — with a consistent focus on making technology, especially
+                security, more accessible.
+              </p>
+              <p>
+                I don’t believe security should feel intimidating or out of reach. At its core, it’s about helping
+                people make better decisions and build things the right way from the start.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-hero__footer">
+            <span aria-hidden="true">SY / 26</span>
+            <div class="about-hero__actions">
+              <Button href={withBase('/contact/')} variant="solid" size="lg">
+                Get in touch
+              </Button>
+              <Button href={withBase('/work/')} variant="outline" size="lg"
+                >Books &amp; Courses</Button
+              >
+            </div>
+          </div>
+        </GlassPanel>
+      </Container>
+    </section>
+
+    <Section
+      eyebrow="What I do"
+      title="Security education, from every angle."
+      subtitle="Over 15 years I’ve contributed to the security community through writing, speaking, podcasting, and creating technical content."
+      align="left"
+      container="xl"
+    >
+      <div class="format-list">
+        {
+          formats.map((format) => (
+            <GlassCard
+              href={withBase(format.href)}
+              padding="lg"
+              radius="xl"
+              class="format-card"
+            >
+              <div class="format-card__meta">
+                <span>{format.number}</span>
+                <span>{format.label}</span>
+              </div>
+              <h2>{format.title}</h2>
+              <p>{format.description}</p>
+              <span class="format-card__link">
+                Explore format <i aria-hidden="true">↗</i>
+              </span>
+            </GlassCard>
+          ))
+        }
+      </div>
+    </Section>
+
+    <section class="principle">
+      <Container size="xl">
+        <p class="principle__index">The approach</p>
+        <blockquote>
+          Security should feel
+          <span>within reach.</span>
+        </blockquote>
+        <div class="principle__note">
+          <span class="principle__mark" aria-hidden="true">✶</span>
+          <p>
+            A big part of what I do is breaking down complex technical ideas into something practical
+            and approachable — whether that’s for individuals, developers, or large organisations.
+          </p>
+        </div>
+      </Container>
+    </section>
+
+    <Section
+      id="stack"
+      eyebrow="Areas of expertise"
+      title="Where I focus."
+      subtitle="My work lives at the intersection of technical depth and practical communication."
+      align="left"
+      container="xl"
+    >
+      <ol class="stack-list">
+        {
+          stack.map((item, index) => (
+            <li>
+              <span class="stack-list__number">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span class="stack-list__category">{item.category}</span>
+              <strong>{item.name}</strong>
+              <p>{item.detail}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </Section>
+
+    <section class="about-cta">
+      <Container size="xl">
+        <div class="about-cta__copy">
+          <p>Collaboration &amp; speaking</p>
+          <h2>Let’s work together.</h2>
+        </div>
+        <div class="about-cta__aside">
+          <p>
+            I’m available for speaking engagements, collaborations, and content partnerships.
+            Get in touch via the contact page.
+          </p>
+          <div>
+            <Button href={withBase('/contact/')} variant="solid" size="lg">
+              Contact me
+            </Button>
+            {
+              siteConfig.social.linkedin && (
+                <Button
+                  href={siteConfig.social.linkedin}
+                  external
+                  variant="outline"
+                  size="lg"
+                >
+                  LinkedIn <span aria-hidden="true">↗</span>
+                </Button>
+              )
+            }
+          </div>
+        </div>
+      </Container>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  main {
+    overflow: clip;
+  }
+
+  .about-hero {
+    padding-block: clamp(3rem, 8vw, 7rem);
+  }
+
+  .about-hero__panel {
+    min-height: min(47rem, calc(100vh - 8rem)); /* fallback */
+    min-height: min(47rem, calc(100dvh - 8rem));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about-hero__meta,
+  .about-hero__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .about-hero__meta {
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .about-hero__body {
+    display: grid;
+    grid-template-columns: minmax(20rem, 1.4fr) minmax(17rem, 0.6fr);
+    align-items: end;
+    gap: clamp(3rem, 8vw, 8rem);
+    padding-block: clamp(4rem, 10vw, 8rem);
+  }
+
+  .about-hero__title > p,
+  .about-cta__copy > p {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-size: var(--text-xs);
+    font-weight: 700;
+  }
+
+  h1 {
+    max-width: 11ch;
+    margin: var(--space-lg) 0 0;
+    font-size: clamp(3.5rem, 8.5vw, 8rem);
+    line-height: 0.88;
+    letter-spacing: -0.07em;
+  }
+
+  .about-hero__statement {
+    padding-left: var(--space-xl);
+    border-left: 1px solid var(--glass-border);
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+  }
+
+  .about-hero__statement p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-hero__footer {
+    align-items: flex-end;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .about-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+  }
+
+  .format-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .format-card {
+    min-height: 28rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .format-card:nth-child(2) {
+    transform: translateY(2.5rem);
+  }
+
+  .format-card__meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .format-card h2 {
+    max-width: 12ch;
+    margin: auto 0 var(--space-lg);
+    font-size: var(--text-3xl);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+  }
+
+  .format-card p {
+    color: var(--color-text-muted);
+  }
+
+  .format-card__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--glass-border);
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  .format-card__link i {
+    color: var(--color-accent);
+    font-style: normal;
+  }
+
+  .principle {
+    padding-block: clamp(7rem, 16vw, 14rem);
+  }
+
+  .principle__index {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  blockquote {
+    max-width: 15ch;
+    margin: clamp(3rem, 7vw, 6rem) 0;
+    font-size: clamp(3.2rem, 8vw, 7.5rem);
+    font-weight: 750;
+    line-height: 0.88;
+    letter-spacing: -0.07em;
+  }
+
+  blockquote span {
+    display: block;
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  .principle__note {
+    display: grid;
+    grid-template-columns: auto minmax(15rem, 31rem);
+    justify-content: end;
+    align-items: start;
+    gap: var(--space-lg);
+  }
+
+  .principle__note p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+  }
+
+  .principle__mark {
+    color: var(--color-accent);
+    font-size: var(--text-2xl);
+  }
+
+  .stack-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .stack-list li {
+    display: grid;
+    grid-template-columns: 3rem 8rem minmax(12rem, 0.65fr) minmax(18rem, 1fr);
+    align-items: baseline;
+    gap: var(--space-lg);
+    margin: 0;
+    padding-block: var(--space-xl);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .stack-list__number,
+  .stack-list__category {
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .stack-list strong {
+    font-size: var(--text-xl);
+  }
+
+  .stack-list p {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+
+  .about-cta {
+    padding-block: clamp(6rem, 14vw, 12rem);
+  }
+
+  .about-cta :global(.container) {
+    display: grid;
+    grid-template-columns: minmax(20rem, 1.2fr) minmax(18rem, 0.8fr);
+    align-items: end;
+    gap: clamp(3rem, 10vw, 10rem);
+    padding-top: clamp(3rem, 7vw, 6rem);
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .about-cta h2 {
+    max-width: 10ch;
+    margin: var(--space-lg) 0 0;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.88;
+    letter-spacing: -0.07em;
+  }
+
+  .about-cta__aside > p {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+  }
+
+  .about-cta__aside > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-xl);
+  }
+
+  @media (max-width: 900px) {
+    .about-hero__body,
+    .format-list,
+    .about-cta :global(.container) {
+      grid-template-columns: 1fr;
+    }
+
+    .format-card,
+    .format-card:nth-child(2) {
+      min-height: 22rem;
+      transform: none;
+    }
+
+    .stack-list li {
+      grid-template-columns: 2.5rem 1fr;
+    }
+
+    .stack-list strong,
+    .stack-list p {
+      grid-column: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .about-hero__meta,
+    .about-hero__footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .about-hero__body {
+      gap: var(--space-2xl);
+    }
+
+    .about-hero__statement {
+      padding: var(--space-xl) 0 0;
+      border-top: 1px solid var(--glass-border);
+      border-left: 0;
+    }
+
+    .about-hero__actions {
+      justify-content: flex-start;
+    }
+
+    .principle__note {
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .format-card:nth-child(2) {
+      transform: none;
+    }
+  }
+</style>

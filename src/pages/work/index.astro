@@ -1,0 +1,221 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/common/Header.astro';
+import Footer from '@/components/common/Footer.astro';
+import Container from '@/components/ui/Container.astro';
+import GlassCard from '@/components/ui/GlassCard.astro';
+
+const books = [
+  {
+    title: 'Exam Ref SC-100 Microsoft Cybersecurity Architect',
+    cover: 'https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780137997305&type=f',
+    coverAlt: 'SC-100 Book Cover',
+    description: 'This Exam Ref prepares you for the SC-100 exam and helps demonstrate real-world mastery of the skills needed to design and evolve cybersecurity strategy across all aspects of enterprise architecture. Designed for experienced IT professionals, it focuses on critical thinking and decision-making acumen needed for success at the Microsoft Certified: Cybersecurity Architect Expert level, covering Zero Trust strategy, governance risk and compliance, data and application security, and security best practices.',
+    note: 'Co-written with Yuri Diogenes, Mark Simos and Gladys Rodriguez. Available to buy from:',
+    links: [
+      { label: 'Microsoft Press Store', href: 'https://www.microsoftpressstore.com/store/exam-ref-sc-100-microsoft-cybersecurity-architect-9780137997305' },
+      { label: 'Amazon', href: 'https://www.amazon.com/Exam-SC-100-Microsoft-Cybersecurity-Architect/dp/0137997302/' },
+    ],
+  },
+  {
+    title: 'Exam Ref SC-200 Microsoft Security Operations Analyst, 2nd Edition',
+    cover: 'https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780135592595&type=f',
+    coverAlt: 'SC-200 2nd Edition Book Cover',
+    description: 'This updated second edition prepares you for the SC-200 exam and helps demonstrate real-world mastery of the skills needed to work with stakeholders to secure IT systems and rapidly remediate active attacks. It focuses on monitoring, identifying, investigating, and responding to threats in cloud and on-premises environments using Microsoft Defender XDR, Security Copilot, Microsoft Sentinel, and Microsoft Defender for Cloud.',
+    note: 'Co-written with Yuri Diogenes. Available to buy from:',
+    links: [
+      { label: 'Microsoft Press Store', href: 'https://www.microsoftpressstore.com/store/exam-ref-sc-200-microsoft-security-operations-analyst-9780135592595' },
+      { label: 'Amazon', href: 'https://www.amazon.com/SC-200-Microsoft-Security-Operations-Analyst/dp/0135590787/' },
+    ],
+  },
+];
+
+const courses = [
+  {
+    title: 'Exam SC-401 Administering Information Security in Microsoft 365',
+    cover: 'https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780135586532&type=f',
+    coverAlt: 'SC-401 Video Course Cover',
+    description: 'This video course provides comprehensive instruction on how to design and implement enterprise-grade information protection, data governance, and risk management strategies using Microsoft Purview and related Microsoft 365 security tools. It covers data classification, sensitivity labelling, data loss prevention, insider risk management, and audit monitoring.',
+    links: [
+      { label: 'Microsoft Press Store', href: 'https://www.microsoftpressstore.com/store/exam-sc-401-administering-information-security-in-microsoft-9780135586532' },
+      { label: 'LinkedIn Learning', href: 'https://www.linkedin.com/learning/microsoft-information-security-administrator-associate-sc-401-cert-prep-by-microsoft-press/' },
+    ],
+  },
+  {
+    title: 'Exam AB-730 AI Business Professional',
+    cover: 'https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780135936573&type=f',
+    coverAlt: 'AB-730 Video Course Cover',
+    description: 'This video course prepares you for the Microsoft AI Business Professional (AB-730) exam, covering the foundational knowledge and practical skills needed to work effectively with AI solutions in a business context. The course focuses on real-world application rather than technical implementation or coding. Learners will explore how to use Copilot, Researcher, and Analyst responsibly.',
+    links: [
+      { label: 'Microsoft Press Store', href: 'https://www.microsoftpressstore.com/store/exam-ab-730-ai-business-professional-video-9780135936573' },
+      { label: 'LinkedIn Learning', href: 'https://www.linkedin.com/learning/microsoft-ai-business-professional-ab-730-cert-prep-by-microsoft-press/' },
+    ],
+  },
+  {
+    title: 'Exam SC-730 Cybersecurity Business Professional',
+    cover: 'https://www.microsoftpressstore.com/ShowCover.aspx?isbn=9780135951958&type=f',
+    coverAlt: 'SC-730 Video Course Cover',
+    description: "This video course prepares you for the Microsoft Cybersecurity Business Professional (SC-730) exam, covering the foundational knowledge needed to understand and apply cybersecurity concepts in a business context. Designed for business professionals rather than technical practitioners, focusing on how to identify cyber threats, understand security principles, and support an organisation's cybersecurity posture.",
+    links: [
+      { label: 'Microsoft Press Store', href: 'https://www.microsoftpressstore.com/store/exam-sc-730-cybersecurity-business-professional-video-9780135951958' },
+      { label: 'LinkedIn Learning', href: 'https://www.linkedin.com/learning/microsoft-cybersecurity-business-professional-sc-730-cert-prep-by-microsoft-press/' },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Books & Courses"
+  description="Books and video courses by Sarah Young covering Microsoft security certifications."
+>
+  <Header />
+
+  <main id="main" tabindex="-1">
+    <Container size="xl">
+      <div class="page-header">
+        <h1>Books &amp; Courses</h1>
+      </div>
+
+      <section class="section">
+        <div class="tiles">
+          {books.map((item) => (
+            <GlassCard padding="lg" radius="xl" class="tile">
+              <div class="tile__inner">
+                <img src={item.cover} alt={item.coverAlt} class="tile__cover" />
+                <div class="tile__body">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  {item.note && <p class="tile__note">{item.note}</p>}
+                  <ul class="tile__links">
+                    {item.links.map((link) => (
+                      <li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </GlassCard>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="tiles">
+          {courses.map((item) => (
+            <GlassCard padding="lg" radius="xl" class="tile">
+              <div class="tile__inner">
+                <img src={item.cover} alt={item.coverAlt} class="tile__cover" />
+                <div class="tile__body">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <p class="tile__note">Available to purchase from:</p>
+                  <ul class="tile__links">
+                    {item.links.map((link) => (
+                      <li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </GlassCard>
+          ))}
+        </div>
+      </section>
+    </Container>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-block: clamp(2rem, 5vw, 4rem) var(--space-2xl);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .page-header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .section {
+    padding-block: clamp(2rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .section-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 28rem), 1fr));
+    gap: var(--space-xl);
+  }
+
+  .tile__inner {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  .tile__cover {
+    width: 120px;
+    height: auto;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    display: block;
+  }
+
+  .tile__body h3 {
+    margin-top: 0;
+    font-size: var(--text-lg);
+    line-height: 1.3;
+  }
+
+  .tile__body p {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    margin-bottom: var(--space-xs);
+  }
+
+  .tile__note {
+    margin-top: var(--space-sm) !important;
+  }
+
+  .tile__links {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-sm) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .tile__links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+
+  .tile__links a:hover {
+    text-decoration: underline;
+  }
+
+  .tile__links li + li::before {
+    content: '\00B7';
+    margin-right: var(--space-xs);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 500px) {
+    .tile__inner {
+      grid-template-columns: 1fr;
+    }
+    .tile__cover {
+      width: 100px;
+    }
+  }
+</style>
