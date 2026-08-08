@@ -94,7 +94,8 @@ const talks = [
 
 <style>
   .speaking-hero {
-    padding-block: clamp(3rem, 8vw, 7rem);
+    padding-block-start: clamp(3rem, 8vw, 7rem);
+    padding-block-end: 0;
   }
 
   .speaking-hero__meta {
@@ -114,7 +115,8 @@ const talks = [
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: clamp(2rem, 6vw, 5rem);
-    padding-block: clamp(3rem, 8vw, 6rem);
+    padding-block-start: clamp(1.5rem, 4vw, 3rem);
+    padding-block-end: var(--space-lg);
   }
 
   .speaking-hero__body h1 {
@@ -138,7 +140,7 @@ const talks = [
   }
 
   .talks-section {
-    padding-block: var(--space-xl) clamp(2rem, 6vw, 5rem);
+    padding-block: var(--space-md) clamp(2rem, 6vw, 5rem);
   }
 
   .talks-grid {
