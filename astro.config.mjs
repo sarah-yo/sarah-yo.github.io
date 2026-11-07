@@ -35,9 +35,6 @@ export default defineConfig({
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
-      config: {
-        quality: 95,
-      },
     },
     format: ['avif', 'webp'],
   },
