@@ -21,7 +21,10 @@ import GlassCard from '@/components/ui/GlassCard.astro';
         <GlassCard padding="xl" radius="xl" class="about__card">
           <div class="about__grid">
             <div class="about__image">
-              <img src="/img/sarah-about.jpg" alt="Sarah Young at a Microsoft event" />
+              <picture>
+                <source media="(max-width: 768px)" srcset="/img/sarah-about-mobile.jpg" />
+                <img src="/img/sarah-about.jpg" alt="Sarah Young at a Microsoft event" />
+              </picture>
             </div>
             <div class="about__text">
               <h1>About me</h1>
