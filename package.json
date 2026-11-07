@@ -33,7 +33,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.35.3",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.36.0"
+    "typescript-eslint": "^9.0.0"
   },
   "keywords": [
     "astro",
